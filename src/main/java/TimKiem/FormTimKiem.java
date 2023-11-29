@@ -32,20 +32,20 @@ public class FormTimKiem extends javax.swing.JPanel {
         listHit1.addItem(new Model_Hit(new ImageIcon(getClass().getResource("/icon/Music/catdoinoisau.jpg")), "Cắt Đôi Nỗi Sầu", "Tăng Duy Tân", "11/9/2023"));
     }
 
-    public void search() {
-        String textSearch = txtSearch.getText();
-        BaiHatEntity listBh = bhDao.selectByNameMusic(textSearch);
-        if (listBh == null) {
-
-            EventQueue.invokeLater(() -> {
-                EventManager.fireEvent(BAI_HAT_SEARCHED, listBh);
-            });
-            JOptionPane.showMessageDialog(null, "đã gửi sự kiện");
-
-        } else {
-            JOptionPane.showMessageDialog(null, "Không tìm thấy bài hát:  " + txtSearch.getText());
-        }
-    }
+//    public void search() {
+//        String textSearch = txtSearch.getText();
+//        BaiHatEntity listBh = bhDao.selectByNameMusic(textSearch);
+//        if (listBh == null) {
+//
+//            EventQueue.invokeLater(() -> {
+//                EventManager.fireEvent(BAI_HAT_SEARCHED, listBh);
+//            });
+//            JOptionPane.showMessageDialog(null, "đã gửi sự kiện");
+//
+//        } else {
+//            JOptionPane.showMessageDialog(null, "Không tìm thấy bài hát:  " + txtSearch.getText());
+//        }
+//    }
 
     private static void setHoverCursor(JLabel label) {
         label.addMouseListener(new MouseAdapter() {
@@ -182,7 +182,7 @@ public class FormTimKiem extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
-        search();
+//        search();
     }//GEN-LAST:event_txtSearchActionPerformed
 
 

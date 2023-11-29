@@ -7,20 +7,21 @@ import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.ListCellRenderer;
 import model.Model_Chill;
 
 public class ListChill<E extends Object> extends JList<E> {
-
+    
     private final DefaultListModel model;
-
+    
     public ListChill() {
         model = new DefaultListModel();
         setModel(model);
         setOpaque(false);
     }
-
+    
     @Override
     public ListCellRenderer getCellRenderer() {
         return new DefaultListCellRenderer() {
@@ -37,11 +38,13 @@ public class ListChill<E extends Object> extends JList<E> {
             }
         };
     }
-
+    
     public void addItem(Model_Chill data) {
         model.addElement(data);
     }
+    
+    public void sout() {
+        JOptionPane.showMessageDialog(null, "In thành công");
+    }
+    
 }
-
-//Trong ví dụ này, mỗi khi di chuột vào một ItemChill, màu nền của nó sẽ thay đổi thành màu đen nhạt, và khi di chuột ra, nó sẽ trở lại màu nền gốc. Bạn có thể điều chỉnh màu nền và độ trong suốt theo ý muốn của mình.
-

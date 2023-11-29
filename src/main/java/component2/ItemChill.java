@@ -7,6 +7,7 @@ import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import model.Model_Chill;
@@ -52,6 +53,12 @@ public class ItemChill extends javax.swing.JPanel {
         roundedImage = new swing.RoundedImage();
         lbMota = new javax.swing.JLabel();
 
+        roundedImage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                roundedImageMouseClicked(evt);
+            }
+        });
+
         lbMota.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lbMota.setForeground(new java.awt.Color(255, 255, 255));
         lbMota.setText("Chill");
@@ -74,6 +81,10 @@ public class ItemChill extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void roundedImageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_roundedImageMouseClicked
+       JOptionPane.showMessageDialog(null, "Hello");
+    }//GEN-LAST:event_roundedImageMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

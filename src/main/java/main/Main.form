@@ -68,7 +68,7 @@
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jSeparator2" min="-2" pref="1" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="panelMusic" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="22" max="32767" attributes="0"/>
                       </Group>
                       <Component id="move" max="32767" attributes="0"/>
@@ -85,7 +85,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="content" min="-2" pref="705" max="-2" attributes="0"/>
                               <Component id="jSeparator2" min="-2" pref="795" max="-2" attributes="0"/>
-                              <Component id="jPanel1" alignment="0" min="-2" pref="696" max="-2" attributes="0"/>
+                              <Component id="panelMusic" alignment="0" min="-2" pref="696" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
@@ -295,7 +295,7 @@
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="javax.swing.JPanel" name="panelMusic">
           <Properties>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
@@ -304,28 +304,6 @@
             <Property name="useNullLayout" type="boolean" value="false"/>
           </Layout>
           <SubComponents>
-            <Component class="swing.Button" name="btnDanhSach">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="39" green="2e" red="26" type="rgb"/>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="null"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Danh S&#xe1;ch Ph&#xe1;t"/>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
-                </Property>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="71" y="537" width="154" height="41"/>
-                </Constraint>
-              </Constraints>
-            </Component>
             <Component class="javax.swing.JLabel" name="lbTime">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -443,18 +421,18 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="swing.Button" name="btnVolumn">
+            <Component class="swing.Button" name="btnDownload">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="31" green="26" red="1d" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icon/volume24.png"/>
+                  <Image iconType="3" name="/icon/download24.png"/>
                 </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="540" width="40" height="40"/>
+                  <AbsoluteConstraints x="200" y="540" width="40" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -536,7 +514,7 @@
                   <Color blue="31" green="26" red="1d" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icon/play.png"/>
+                  <Image iconType="3" name="/icon/detailsMusic.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -563,6 +541,51 @@
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="260" y="540" width="40" height="40"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="swing.Button" name="btnVolumn">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="31" green="26" red="1d" type="rgb"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/volume24.png"/>
+                </Property>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="0" y="540" width="40" height="40"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="swing.Button" name="btnListMusic">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="31" green="26" red="1d" type="rgb"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/play.png"/>
+                </Property>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="130" y="540" width="40" height="40"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="swing.Button" name="btnAddPlaylist">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="31" green="26" red="1d" type="rgb"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/add24.png"/>
+                </Property>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="60" y="540" width="40" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>

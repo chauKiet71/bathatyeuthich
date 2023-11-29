@@ -6,6 +6,8 @@ import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.DefaultListModel;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import model.Model_Chill;
 
@@ -21,12 +23,14 @@ public class Chill extends javax.swing.JPanel {
         listChill2.addItem(new Model_Chill(new ImageIcon(getClass().getResource("/icon/ChillForm/7.jpg")), "Nhạc Chill Tâm Trạng Buồn"));
         listChill3.addItem(new Model_Chill(new ImageIcon(getClass().getResource("/icon/ChillForm/13.jpg")), "Tình Iu Cực Chill"));
         listChill4.addItem(new Model_Chill(new ImageIcon(getClass().getResource("/icon/ChillForm/3.jpg")), "Nhạc Lâu Phai Chill Gây Nghiện"));
+
         setHoverCursor(listChill1);
         setHoverCursor(listChill2);
         setHoverCursor(listChill3);
         setHoverCursor(listChill4);
     }
 
+// Tương tự cho listChill2, listChill3, listChill4
     private static void setHoverCursor(ListChill<?> listChill) {
         listChill.addMouseListener(new MouseAdapter() {
             @Override
@@ -69,6 +73,9 @@ public class Chill extends javax.swing.JPanel {
         jLabel1.setText("Chill");
 
         listChill1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listChill1MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 listChill1MouseEntered(evt);
             }
@@ -112,6 +119,10 @@ public class Chill extends javax.swing.JPanel {
     private void listChill1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listChill1MouseExited
 //        setDefaultCursor(listChill1)
     }//GEN-LAST:event_listChill1MouseExited
+
+    private void listChill1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listChill1MouseClicked
+        listChill1.sout();
+    }//GEN-LAST:event_listChill1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

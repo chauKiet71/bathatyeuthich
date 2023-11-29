@@ -10,6 +10,7 @@ public class tableDAO {
 
     String sql_selectAll = "Select * from BaiHat";
     String sql_selectById = "Select MaBh from BaiHat where tenBh = ?";
+    String sql_playlist = "Select * from BaiHat where MaPlaylist = ?";
 
     public List<Model_Table> selectAll() {
         return this.selectBySql(sql_selectAll);
@@ -21,6 +22,30 @@ public class tableDAO {
             return null;
         }
         return list.get(0);
+    }
+
+    public List<Model_Table> selectBySoLuotNghe(String query) {
+        List<Model_Table> list = this.selectBySql(query);
+        if (list.isEmpty()) {
+            return null;
+        }
+        return list;
+    }
+
+    public List<Model_Table> selectByNameMusic(String select) {
+        List<Model_Table> list = this.selectBySql(select);
+        if (list.isEmpty()) {
+            return null;
+        }
+        return list;
+    }
+
+    public List<Model_Table> selectPlaylist(String id) {
+        List<Model_Table> list = this.selectBySql(sql_playlist, id);
+        if (list.isEmpty()) {
+            return null;
+        }
+        return list;
     }
 
     protected List<Model_Table> selectBySql(String sql, Object... args) {

@@ -160,6 +160,7 @@ public class FormDetailMusic extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         content = new javax.swing.JScrollPane();
         lbInNhac = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(29, 38, 49));
 
@@ -204,17 +205,23 @@ public class FormDetailMusic extends javax.swing.JPanel {
         content.setHorizontalScrollBar(null);
 
         lbInNhac.setBackground(new java.awt.Color(33, 42, 53));
-        lbInNhac.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lbInNhac.setFont(new java.awt.Font("Segoe UI", 2, 16)); // NOI18N
         lbInNhac.setForeground(new java.awt.Color(255, 255, 255));
         lbInNhac.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lbInNhac.setOpaque(true);
         content.setViewportView(lbInNhac);
 
+        jLabel2.setBackground(new java.awt.Color(29, 38, 49));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setText("    Lời bài hát:");
+        jLabel2.setOpaque(true);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addGap(0, 23, Short.MAX_VALUE)
@@ -222,9 +229,13 @@ public class FormDetailMusic extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 428, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 395, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 32, Short.MAX_VALUE)
+                    .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -283,6 +294,7 @@ public class FormDetailMusic extends javax.swing.JPanel {
     private javax.swing.JScrollPane content;
     private swing.ImageAvarta imageAvarta1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbAnh;

@@ -1,19 +1,21 @@
 package saveEvent;
 
 import entity.BaiHatEntity;
+import java.util.List;
 
 public class SearchStateManager {
 
-    public static BaiHatEntity searched;
+    public static List<BaiHatEntity> searched;
 
     public SearchStateManager() {
     }
 
-    public static BaiHatEntity getSelectedBaiHat() {
+    public static List<BaiHatEntity> getSearched() {
         return searched;
     }
 
-    public static void setSelectedBaiHat(BaiHatEntity baiHat) {
-        searched = baiHat;
+    public static void setSearched(List<BaiHatEntity> searched) {
+        SearchStateManager.searched = searched;
     }
+
 }

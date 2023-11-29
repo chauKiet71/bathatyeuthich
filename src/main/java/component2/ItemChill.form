@@ -36,6 +36,9 @@
   </Layout>
   <SubComponents>
     <Container class="swing.RoundedImage" name="roundedImage">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="roundedImageMouseClicked"/>
+      </Events>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="true"/>

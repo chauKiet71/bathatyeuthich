@@ -21,43 +21,226 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="926" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="img21" min="-2" pref="210" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="img22" min="-2" pref="210" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="img23" min="-2" pref="210" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="img24" min="-2" pref="210" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="236" max="-2" attributes="0"/>
+                  <Component id="table1" min="-2" pref="885" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="img5" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img9" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img13" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel26" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img17" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="img6" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img10" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img14" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img18" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="img7" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img11" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel23" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img15" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img19" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel31" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img8" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img12" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="img16" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img20" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="img1" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img2" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img3" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="img4" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="img25" min="-2" pref="210" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="img26" min="-2" pref="210" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="img27" min="-2" pref="210" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="img28" min="-2" pref="210" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="slideShow1" min="-2" pref="922" max="-2" attributes="0"/>
-                      <Component id="trangChuItem11" min="-2" max="-2" attributes="0"/>
-                      <Component id="trangChuItem22" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel1" min="-2" pref="236" max="-2" attributes="0"/>
-                              <Component id="table1" min="-2" pref="885" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="slideShow1" min="-2" pref="922" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="3560" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="400" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="img1" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img2" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img3" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img4" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="img5" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img6" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img7" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img8" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="img9" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img10" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img11" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img12" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="img13" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img14" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img15" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img16" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="img17" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img18" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img19" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img20" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Component id="table1" min="-2" pref="661" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="img21" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img22" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img23" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img24" min="-2" pref="210" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="img25" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img26" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img27" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="img28" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="74" max="32767" attributes="0"/>
+          </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
                   <Component id="slideShow1" min="-2" pref="340" max="-2" attributes="0"/>
-                  <EmptySpace min="45" pref="45" max="-2" attributes="0"/>
-                  <Component id="trangChuItem11" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                  <Component id="table1" min="-2" pref="690" max="-2" attributes="0"/>
-                  <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                  <Component id="trangChuItem22" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="3129" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -70,8 +253,6 @@
           <Color blue="31" green="26" red="1d" type="rgb"/>
         </Property>
       </Properties>
-    </Component>
-    <Component class="form.TrangChuItem1" name="trangChuItem11">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -98,6 +279,35 @@
             <Column editable="true" title="Ma" type="java.lang.Object"/>
           </Table>
         </Property>
+        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+          <TableColumnModel selectionModel="0">
+            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+              <Title/>
+              <Editor/>
+              <Renderer/>
+            </Column>
+            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+              <Title/>
+              <Editor/>
+              <Renderer/>
+            </Column>
+            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+              <Title/>
+              <Editor/>
+              <Renderer/>
+            </Column>
+            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+              <Title/>
+              <Editor/>
+              <Renderer/>
+            </Column>
+            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+              <Title/>
+              <Editor/>
+              <Renderer/>
+            </Column>
+          </TableColumnModel>
+        </Property>
         <Property name="focusable" type="boolean" value="false"/>
         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
@@ -107,7 +317,473 @@
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="table1MouseClicked"/>
       </Events>
     </Component>
-    <Component class="form.TrangChuItem2" name="trangChuItem22">
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="20" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Chill"/>
+      </Properties>
     </Component>
+    <Container class="swing.RoundedImage" name="img2">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img3">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img4">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel12">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Nh&#x1ea1;c Chill T&#xe2;m Tr&#x1ea1;ng Bu&#x1ed3;n"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel13">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="T&#xec;nh Iu C&#x1ef1;c Chill"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel14">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Nh&#x1ea1;c L&#xe2;u Phai Chill G&#xe2;y Nghi&#x1ec7;n"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img1">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="img1MouseClicked"/>
+      </Events>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel15">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Nh&#x1ea1;c Chill Y&#xea;u &#x110;&#x1edd;i"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel16">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Nh&#x1ea1;c Tr&#x1ebb; Vinahouse"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img5">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel17">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Remix Vi&#x1ec7;t Ng&#xe0;y Nay"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="20" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Remix L&#xe0; Dance Lu&#xf4;n"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img6">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img7">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img8">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel18">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Dance Vi&#x1ec7;t Hay Nh&#x1ea5;t"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel19">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="TikTok Remix"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel20">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x110;&#xe2;y L&#xe0; Rap Love"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img9">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel21">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Rap Vi&#x1ec7;t Ng&#xe0;y Nay"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="20" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Rap Vi&#x1ec7;t C&#x1ef1;c Ch&#x1ea5;t"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img10">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img11">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img12">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel22">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x1a0;, &#x110;&#x1ed9;ng &#x110;&#x1ea5;t &#xc0; !"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel23">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Gia V&#x1ecb; Rap Vi&#x1ec7;t"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img16">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel24">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B&#x1ead;t Speed Up L&#xea;n"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel25">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Nh&#x1ea1;c D&#xed; Deadline"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img15">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="20" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Nghe L&#xe0; Y&#xea;u &#x110;&#x1edd;i"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img13">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel26">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="T&#x1ef1; Nhi&#xea;n Vui Ngang"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel27">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="T&#xec;nh Iu C&#x169;ng Vui &#xc1; Ch&#x1ee9;"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img14">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img17">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel28">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Nh&#x1ea1;c &#x110;&#x1ec3; Suy"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img19">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel29">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="T&#xe2;m T&#xec;nh L&#xe2;u Phai"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel30">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="V&#x1eab;n M&#x1ed9;ng M&#x1a1; D&#xf9; T&#xec;nh &#x110;&#xe3; V&#x1ee1;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="20" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="T&#xe2;m Tr&#x1ea1;ng H&#x1a1;i Suy"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel31">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="15" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="D&#x1ea1;o Quanh Th&#xe0;nh Ph&#x1ed1; M&#xec;nh Ta"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img20">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img18">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="20" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Ch&#x1ee7; &#x110;&#x1ec1; Hot"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img21">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img22">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img23">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img24">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="20" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Top 100"/>
+      </Properties>
+    </Component>
+    <Container class="swing.RoundedImage" name="img25">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img26">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img27">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="swing.RoundedImage" name="img28">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
   </SubComponents>
 </Form>

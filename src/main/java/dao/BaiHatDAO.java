@@ -13,7 +13,8 @@ public class BaiHatDAO {
     String tim_update = "update BaiHat set SoLuotThich = ? where MaBh = ?";
     String sql_selectAll = "Select * from BaiHat";
     String sql_selectById = "Select * from BaiHat where MaBh = ?";
-    String sql_selectByBaiHat = "Select * from BaiHat where tenBh like ?";
+    String sql_selectPlaylist = "Select * from BaiHat where MaPlaylist = ?";
+//    String sql_selectByBaiHat = "SELECT * FROM BaiHat WHERE TenBH COLLATE Latin1_General_CI_AI LIKE N'%" + keyword + "%'";
 
     public void updateView(BaiHatEntity entity) {
         try {
@@ -49,12 +50,12 @@ public class BaiHatDAO {
         return list.get(0);
     }
 
-    public BaiHatEntity selectByNameMusic(String id) {
-        List<BaiHatEntity> list = this.selectBySql(sql_selectByBaiHat, id);
+    public List<BaiHatEntity> selectByNameMusic(String select) {
+        List<BaiHatEntity> list = this.selectBySql(select);
         if (list.isEmpty()) {
             return null;
         }
-        return list.get(0);
+        return list;
     }
 
     protected List<BaiHatEntity> selectBySql(String sql, Object... args) {

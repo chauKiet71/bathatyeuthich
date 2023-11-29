@@ -31,7 +31,5 @@ public class Model_Chill {
     public void setTitle(String title) {
         this.title = title;
     }
-    
-    
-    
+ 
 }
