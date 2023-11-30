@@ -15,7 +15,10 @@ import TimKiem.FormTimKiem;
 import TimKiem.FormTimKiem2;
 import TimKiem.TimKiem_TatCa;
 import dao.BaiHatDAO;
+import dao.BaiHatYeuThichDAO;
+import entity.AccountData;
 import entity.BaiHatEntity;
+import entity.BaiHatEntityTest;
 import form.ChillForm;
 import form.FormChiTietPlaylist;
 import form.FormDetailMusic;
@@ -94,6 +97,7 @@ public class Main extends javax.swing.JFrame {
     SearchStateManager searched = new SearchStateManager();
     BaiHatDAO bhDao = new BaiHatDAO();
 
+    BaiHatYeuThichDAO bhyt = new BaiHatYeuThichDAO();
     private static PlaylistSelectedCopy cc;
     public static final String PLAYLIST_SELECTED_EVENT2 = "PLAYLIST_SELECTED_EVENT2";
 
@@ -584,8 +588,10 @@ public class Main extends javax.swing.JFrame {
     public void tim() {
         if (manager.getSelectedBaiHat() != null) {
             if (isTim == false) {
+                //tim thich
                 btnTim.setIcon(new ImageIcon(getClass().getResource("/icon/heart24.png")));
                 BaiHatEntity bhEntity = getEntity1(1);
+                BaiHatYeuThichInsert();
                 try {
                     bhDao.updateTim(bhEntity);
                 } catch (Exception e) {
@@ -593,10 +599,12 @@ public class Main extends javax.swing.JFrame {
                 }
                 isTim = true;
             } else {
+                //khong thich
                 btnTim.setIcon(new ImageIcon(getClass().getResource("/icon/heart24null.png")));
                 BaiHatEntity bhEntity = getEntity1(-1);
                 try {
                     bhDao.updateTim(bhEntity);
+                    BaiHatYeuThichDelete();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -622,6 +630,36 @@ public class Main extends javax.swing.JFrame {
                 btn.setToolTipText(null);
             }
         });
+    }
+
+    //bai hat yeu thich
+    entity.BaiHatYeuThich getNgheGanDay(String mabh, String tentk) {
+        entity.BaiHatYeuThich bhyt = new entity.BaiHatYeuThich();
+        bhyt.setMaBH(mabh);
+        bhyt.setTenTK(tentk);
+        return bhyt;
+    }
+
+    BaiHatYeuThichDAO bhytDao = new BaiHatYeuThichDAO();
+
+    void BaiHatYeuThichInsert() {
+        System.out.println("ma bai hat form trang chu" + AccountData.getSavaMaBh());
+        entity.BaiHatYeuThich bh = getNgheGanDay(AccountData.getSavaMaBh(), AccountData.getTenTK());
+        try {
+            bhyt.insert(bh);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    void BaiHatYeuThichDelete() {
+        System.out.println("ma bai hat form trang chu" + AccountData.getSavaMaBh());
+        entity.BaiHatYeuThich bh = getNgheGanDay(AccountData.getSavaMaBh(), AccountData.getTenTK());
+        try {
+            bhyt.deleteByid(AccountData.getSavaMaBh());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @SuppressWarnings("unchecked")

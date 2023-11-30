@@ -5,7 +5,7 @@ import java.sql.*;
 public class XJdbcc {
 
     static String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    static String url = "jdbc:sqlserver://localhost:1433;databaseName=Music";   
+    static String url = "jdbc:sqlserver://localhost:1433;databaseName=musicTest";   
     static String user = "sa";
     static String pass = "123";
 

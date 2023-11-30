@@ -11,6 +11,15 @@ public class tableDAO {
     String sql_selectAll = "Select * from BaiHat";
     String sql_selectById = "Select MaBh from BaiHat where tenBh = ?";
     String sql_playlist = "Select * from BaiHat where MaPlaylist = ?";
+    String sql_selectByIdMaBH = "Select * from BaiHat where MaBh = ?";
+
+    public Model_Table selectByIdMaBh(String id) {
+        List<Model_Table> list = this.selectBySql(sql_selectByIdMaBH, id);
+        if (list.isEmpty()) {
+            return null;
+        }
+        return list.get(0);
+    }
 
     public List<Model_Table> selectAll() {
         return this.selectBySql(sql_selectAll);
@@ -56,6 +65,7 @@ public class tableDAO {
                 Model_Table entity = new Model_Table();
 
                 entity.setIcon(new ImageIcon(getClass().getResource(rs.getString(6))));
+                System.out.println(getClass().getResource(rs.getString(6)));
                 entity.setName(rs.getString(2));
                 entity.setSing(rs.getString(3));
                 entity.setView(rs.getInt(10));

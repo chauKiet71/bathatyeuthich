@@ -1,7 +1,17 @@
 package form;
 
+import dao.NguoiDungDangKyDAO;
+import dao.TaiKhoanDangKyDAO;
+import entity.AccountData;
+import entity.NguoiDung;
+import entity.TaiKhoan;
 import java.awt.Color;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import javax.swing.Timer;
+import javax.swing.border.LineBorder;
+import org.mindrot.jbcrypt.BCrypt;
+import utils.msgBox;
 
 public class Signup extends javax.swing.JFrame {
 
@@ -10,11 +20,19 @@ public class Signup extends javax.swing.JFrame {
     public Signup() {
         initComponents();
         init();
+        this.lbLoading.setVisible(false);
+        Color transparentBlack = new Color(0, 0, 0, 128);
+        lbBackGroud.setBackground(transparentBlack);
+        lbBackGroud.setOpaque(true);
+        lbBackGroud.setVisible(false);
     }
+
+    TaiKhoanDangKyDAO tkdao = new TaiKhoanDangKyDAO();
+    NguoiDungDangKyDAO ngdao = new NguoiDungDangKyDAO();
 
     public void init() {
 //        txtName.setPrefixIcon(new ImageIcon(getClass().getResource("/icon/user.png")));
-        txtName.setHint("Tên tài khoản");
+        txtTaiKhoan.setHint("Tên tài khoản");
 //        txtEmail.setPrefixIcon(new ImageIcon(getClass().getResource("/icon/mail.png")));
         txtEmail.setHint("Email");
 //        txtPass.setPrefixIcon(new ImageIcon(getClass().getResource("/icon/pass.png")));
@@ -29,15 +47,212 @@ public class Signup extends javax.swing.JFrame {
         btnLogin.setForeground(Color.WHITE);
     }
 
+    void openDangNhap() {
+        lbBackGroud.setVisible(true);
+        lbLoading.setVisible(true);
+        Timer formTimer = new Timer(2000, event -> {
+            // Chuyển đến form chính sau 2 giây
+            LogIn lg = new LogIn();
+            lg.setVisible(true);
+            this.dispose();
+        });
+        formTimer.setRepeats(false);
+        formTimer.start();
+
+    }
+
+    void setFormTK(TaiKhoan tk) {
+        txtTaiKhoan.setText(tk.getTenTk());
+        txtPass.setText(tk.getMatKhau());
+    }
+
+    TaiKhoan getFormTK() {
+        TaiKhoan tk = new TaiKhoan();
+        tk.setTenTk(txtTaiKhoan.getText());
+        tk.setMatKhau(txtPass.getText());
+        String tenTk = txtTaiKhoan.getText();
+        AccountData.setTenTK(tenTk);
+        return tk;
+    }
+
+    void setForm(NguoiDung ng) {
+        txtTen.setText(ng.getTenTK());
+        txtEmail.setText(ng.getEmail());
+    }
+
+    NguoiDung getForm() {
+        NguoiDung ng = new NguoiDung();
+        ng.setHoTen(txtTen.getText());
+        ng.setEmail(txtEmail.getText());
+        ng.setTenTK(txtTaiKhoan.getText());
+        return ng;
+    }
+
+    void insert() {
+        TaiKhoan tk = getFormTK();
+        NguoiDung ng = getForm();
+        String password = new String(txtPass.getPassword());
+        String hashedPassword = bcryrt(password);
+        tk.setMatKhau(hashedPassword);
+        String mk2 = new String(hashedPassword);
+        if (!mk2.equals(hashedPassword)) {
+            msgBox.alertError(this, "Xác nhận mật khẩu không đúng");
+        } else {
+            try {
+                tkdao.insert(tk);
+                ngdao.insert(ng);
+                msgBox.alert(this, "Đăng ký thành công");
+                updateAnh upAnh = new updateAnh();
+                upAnh.setVisible(true);
+                this.dispose();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    void cleanForm() {
+        NguoiDung ng = new NguoiDung();
+        TaiKhoan tk = new TaiKhoan();
+        setForm(ng);
+        setFormTK(tk);
+        txtPassAgaint.setText("");
+    }
+
+    boolean check() {
+        String pass = new String(txtPass.getPassword());
+        String confirmPass = new String(txtPassAgaint.getPassword());
+        if (txtTen.getText().isEmpty()) {
+            txtTen.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Vui lòng nhập họ tên");
+            txtTen.requestFocus();
+            return false;
+        } else {
+            txtTen.setBorder(null);
+        }
+        if (txtTen.getText().matches(".*\\d.*")) {
+            txtTen.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Họ tên không được chứa kí tự số");
+            txtTen.requestFocus();
+            return false;
+        } else {
+            txtTen.setBorder(null);
+        }
+        if (txtTaiKhoan.getText().contains(" ")) {
+            txtTaiKhoan.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Tên tài khoản không được chứa khoản trắng");
+            txtTaiKhoan.requestFocus();
+            return false;
+        } else {
+            txtTaiKhoan.setBorder(null);
+        }
+        if (txtTaiKhoan.getText().isEmpty()) {
+            txtTen.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Vui lòng nhập tên tài khoản");
+            txtTen.requestFocus();
+            return false;
+        } else {
+            txtTaiKhoan.setBorder(null);
+        }
+        if (txtTaiKhoan.getText().length() <= 6) {
+            txtTaiKhoan.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Tên tài khoản cần có ít nhất 6 kí tự");
+            requestFocus();
+            return false;
+        } else {
+            txtTaiKhoan.setBorder(null);
+        }
+        if (txtEmail.getText().isEmpty()) {
+            txtEmail.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Email không được để trống");
+            txtEmail.requestFocus();
+            return false;
+        } else {
+            txtEmail.setBorder(null);
+        }
+        if (txtEmail.getText().contains(" ")) {
+            txtEmail.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Email không dược chứa khoản trắng");
+            txtEmail.requestFocus();
+            return false;
+        } else {
+            txtEmail.setBorder(null);
+        }
+        if (!txtEmail.getText().endsWith("@gmail.com")) {
+            txtEmail.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Vui lòng nhập đúng định của email");
+            txtEmail.requestFocus();
+            return false;
+        } else {
+            txtEmail.setBorder(null);
+        }
+        if (pass.isEmpty()) {
+            txtPass.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Vui lòng nhập mật khẩu");
+            txtPass.requestFocus();
+            return false;
+        } else {
+            txtPass.setBorder(null);
+        }
+        if (!pass.matches(".*\\d.*")) {
+            txtPass.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Mật khẩu của bạn cần có ít nhất 1 kí tự số");
+            txtPass.requestFocus();
+            return false;
+        } else {
+            txtPass.setBorder(null);
+        }
+        if (!pass.matches(".*[A-Z].*")) {
+            txtPass.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Mật khẩu của bạn cần có ít nhất 1 kí tự in hoa");
+            txtPass.requestFocus();
+            return false;
+        } else {
+            txtPass.setBorder(null);
+        }
+        if (!pass.matches(".*[!@#$%^&*()].*")) {
+            txtPass.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Mật khẩu của bạn cần có ít nhất 1 kí tự đặt biệt");
+            txtPass.requestFocus();
+            return false;
+        } else {
+            txtPass.setBorder(null);
+        }
+        if (pass.length() <= 6) {
+            txtPass.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+            msgBox.alertError(this, "Mật khẩu của bạn cần có ít nhất 6 kí tự");
+            txtPass.requestFocus();
+            return false;
+        } else {
+            txtPass.setBorder(null);
+        }
+//        if (!pass.equals(confirmPass)) {
+//            txtPassAgaint.setBorder(BorderFactory.createCompoundBorder(new LineBorder(color.red), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+//            msgBox.alertError(this, "Xác nhận mật khẩu không đúng");
+//            txtPassAgaint.requestFocus();
+//            return false;
+//        } else {
+//            txtPassAgaint.setBorder(null);
+//        }
+        return true;
+    }
+
+    String bcryrt(String pass) {
+        String maHoa = BCrypt.hashpw(pass, BCrypt.gensalt());
+        return maHoa;
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbLoading = new javax.swing.JLabel();
+        lbBackGroud = new javax.swing.JLabel();
         panel1 = new swing.Panel();
         lbOut = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtPass = new swing.MyPasswordField();
-        txtName = new swing.MyTextField();
+        txtTaiKhoan = new swing.MyTextField();
         btnSignup = new swing.Button();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -51,6 +266,14 @@ public class Signup extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lbLoading.setForeground(new java.awt.Color(51, 255, 0));
+        lbLoading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icon-playing.gif"))); // NOI18N
+        getContentPane().add(lbLoading, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 90, 50));
+
+        lbBackGroud.setFocusable(false);
+        getContentPane().add(lbBackGroud, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 690));
 
         panel1.setBackground(new java.awt.Color(0, 0, 0));
         panel1.setOpaque(true);
@@ -88,15 +311,20 @@ public class Signup extends javax.swing.JFrame {
         txtPass.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         panel1.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, 278, -1));
 
-        txtName.setForeground(new java.awt.Color(0, 0, 0));
-        txtName.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        panel1.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 278, -1));
+        txtTaiKhoan.setForeground(new java.awt.Color(0, 0, 0));
+        txtTaiKhoan.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        panel1.add(txtTaiKhoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 278, -1));
 
         btnSignup.setBorder(null);
         btnSignup.setText("Đăng ký");
         btnSignup.setFocusPainted(false);
         btnSignup.setFocusable(false);
         btnSignup.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSignupActionPerformed(evt);
+            }
+        });
         panel1.add(btnSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, 278, 44));
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
@@ -128,22 +356,18 @@ public class Signup extends javax.swing.JFrame {
         btnLogin.setFocusPainted(false);
         btnLogin.setFocusable(false);
         btnLogin.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
         panel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 480, 278, 44));
         panel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 79, 37, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/signup.png"))); // NOI18N
         panel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 690));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -164,6 +388,17 @@ public class Signup extends javax.swing.JFrame {
     private void lbOutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbOutMouseExited
         lbOut.setForeground(new Color(239, 32, 130));
     }//GEN-LAST:event_lbOutMouseExited
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        openDangNhap();
+    }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignupActionPerformed
+        if (check() == true) {
+            insert();
+            cleanForm();
+        }
+    }//GEN-LAST:event_btnSignupActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,6 +426,9 @@ public class Signup extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Signup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -208,12 +446,14 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel lbBackGroud;
+    private javax.swing.JLabel lbLoading;
     private javax.swing.JLabel lbOut;
     private swing.Panel panel1;
     private swing.MyTextField txtEmail;
-    private swing.MyTextField txtName;
     private swing.MyPasswordField txtPass;
     private swing.MyPasswordField txtPassAgaint;
+    private swing.MyTextField txtTaiKhoan;
     private swing.MyTextField txtTen;
     // End of variables declaration//GEN-END:variables
 }

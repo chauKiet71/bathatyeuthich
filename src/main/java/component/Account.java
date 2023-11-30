@@ -1,20 +1,22 @@
-
 package component;
 
+import entity.AccountData;
 import javax.swing.ImageIcon;
 import model.Model_Account;
 
-
 public class Account extends javax.swing.JPanel {
 
- 
     public Account() {
         initComponents();
         init();
     }
 
-    public void init(){
-        listAccount1.addItem(new Model_Account("Anonymus", new ImageIcon(getClass().getResource("/icon/avartar.jpg"))));
+    public void init() {
+        String name = AccountData.getTenTK();
+        String link = AccountData.getLink();
+        ImageIcon icon = new ImageIcon(link);
+//        listAccount1.addItem(new Model_Account(name, new ImageIcon(getClass().getResource("/icon/avartar.jpg"))));
+        listAccount1.addItem(new Model_Account(name, icon));
     }
 
     @SuppressWarnings("unchecked")

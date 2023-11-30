@@ -10,7 +10,10 @@ import SlideShow.Slide6;
 import Table.Model_Table;
 import Table.tableDAO;
 import dao.BaiHatDAO;
+import dao.NgheGanDayDAO;
+import entity.AccountData;
 import entity.BaiHatEntity;
+import entity.NgheGanDay;
 import saveEvent.BaiHatStateManager;
 import java.awt.Component;
 import java.awt.Cursor;
@@ -122,13 +125,27 @@ public class FormTrangChu extends javax.swing.JPanel {
 
     int row = 0;
 
+    NgheGanDay getNgheGanDay(String mabh, String tentk) {
+        NgheGanDay nghe = new NgheGanDay();
+        nghe.setMaBh(mabh);
+        nghe.setTenTK(tentk);
+        return nghe;
+    }
+
     void edit() {
         this.row = table1.getSelectedRow();
         String maBh = (String) table1.getValueAt(this.row, 4);
-        bh = bhDao.selectById(maBh);    
+        bh = bhDao.selectById(maBh);
+        AccountData.setSavaMaBh(maBh);
+
+        NgheGanDay ngd = getNgheGanDay(bh.getMaBh(), AccountData.getTenTK());
+//        System.out.println("tennnnnnnn tai khoan" + Auth.getTenTk());F
         try {
             BaiHatEntity bhEntity = getEntity();
             bhDao.updateView(bhEntity);
+            NgheGanDayDAO daydao = new NgheGanDayDAO();
+            daydao.insert(ngd);
+            System.out.println("ccccccccccccccccccccc");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -166,8 +183,8 @@ public class FormTrangChu extends javax.swing.JPanel {
         Cursor defaultCursor = new Cursor(Cursor.DEFAULT_CURSOR);
         component.setCursor(defaultCursor);
     }
-    
-    public void sendPlaylist(String text){
+
+    public void sendPlaylist(String text) {
         EventQueue.invokeLater(() -> {
             EventManager.fireEvent(PLAYLIST_SELECTED_EVENT, text);
         });

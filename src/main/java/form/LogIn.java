@@ -1,8 +1,17 @@
 package form;
 
+import dao.NguoiDungDangKyDAO;
+import dao.TaiKhoanDAO;
+import entity.AccountData;
+import entity.TaiKhoan;
 import java.awt.Color;
+import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.Timer;
+import main.Main;
+import org.mindrot.jbcrypt.BCrypt;
+import utils.msgBox;
 
 public class LogIn extends javax.swing.JFrame {
 
@@ -11,7 +20,15 @@ public class LogIn extends javax.swing.JFrame {
     public LogIn() {
         initComponents();
         init();
+        this.lbLoading.setVisible(false);
+        Color transparentBlack = new Color(0, 0, 0, 128);
+        lbBackGroud.setBackground(transparentBlack);
+        lbBackGroud.setOpaque(true);
+        lbBackGroud.setVisible(false);
     }
+
+    TaiKhoanDAO dao = new TaiKhoanDAO();
+    NguoiDungDangKyDAO nddao = new NguoiDungDangKyDAO();
 
     public void init() {
         txtName.setPrefixIcon(new ImageIcon(getClass().getResource("/icon/user.png")));
@@ -24,10 +41,60 @@ public class LogIn extends javax.swing.JFrame {
         btnSignup.setForeground(Color.WHITE);
     }
 
+    void dangNhap() {
+        String tenTK = txtName.getText();
+        AccountData.setTenTK(tenTK);
+        TaiKhoan tk = dao.selectById(tenTK);
+        String matKhau = new String(txtPass.getPassword());
+        if (tk != null) {
+            boolean mahoa = bcryrt(matKhau, tk.getMatKhau());
+            String linkPath = tk.getAvatar();
+            File file = new File(linkPath);
+            String ii = file.toString();
+            AccountData.setLink(ii);
+            if (!mahoa) {
+                msgBox.alertError(this, "Tên tài khoản hoặc mật khẩu không đúng");
+            } else {
+                // Tạo một Timer để chuyển đến form chính sau 3 giây
+                lbLoading.setVisible(true);
+                lbBackGroud.setVisible(true);
+                Timer formTimer = new Timer(2000, event -> {
+                    // Chuyển đến form chính sau 3 giây
+                    Main mn = new Main();
+                    mn.setVisible(true);
+                    this.dispose();
+                });
+                formTimer.setRepeats(false);
+                formTimer.start();
+            }
+        } else {
+            msgBox.alertError(this, "Vui lòng nhập tên đăng nhập và mật khẩu");
+        }
+    }
+
+    void openDangKy() {
+        lbBackGroud.setVisible(true);
+        lbLoading.setVisible(true);
+        Timer formTimer = new Timer(2000, event -> {
+            // Chuyển đến form chính sau 2 giây
+            Signup su = new Signup();
+            su.setVisible(true);
+            this.dispose();
+        });
+        formTimer.setRepeats(false);
+        formTimer.start();
+    }
+
+    boolean bcryrt(String pass, String hash) {
+        return BCrypt.checkpw(pass, hash);
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbLoading = new javax.swing.JLabel();
+        lbBackGroud = new javax.swing.JLabel();
         panel1 = new swing.Panel();
         lbOut = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -46,6 +113,13 @@ public class LogIn extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lbLoading.setForeground(new java.awt.Color(51, 255, 0));
+        lbLoading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icon-playing.gif"))); // NOI18N
+        getContentPane().add(lbLoading, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 90, 50));
+
+        lbBackGroud.setFocusable(false);
+        getContentPane().add(lbBackGroud, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1130, 690));
 
         panel1.setBackground(new java.awt.Color(0, 0, 0));
         panel1.setOpaque(true);
@@ -80,10 +154,12 @@ public class LogIn extends javax.swing.JFrame {
         panel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 142, 120, 30));
 
         txtPass.setForeground(new java.awt.Color(0, 0, 0));
+        txtPass.setText("A12345*");
         txtPass.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
         panel1.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 258, 278, -1));
 
         txtName.setForeground(new java.awt.Color(0, 0, 0));
+        txtName.setText("fffffffffffffffffff");
         txtName.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
         panel1.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 190, 278, -1));
 
@@ -92,6 +168,11 @@ public class LogIn extends javax.swing.JFrame {
         btnLogin.setFocusPainted(false);
         btnLogin.setFocusable(false);
         btnLogin.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
         panel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 351, 278, 44));
 
         btnSignup.setBorder(null);
@@ -99,6 +180,11 @@ public class LogIn extends javax.swing.JFrame {
         btnSignup.setFocusPainted(false);
         btnSignup.setFocusable(false);
         btnSignup.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSignupActionPerformed(evt);
+            }
+        });
         panel1.add(btnSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 457, 278, 44));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -157,6 +243,14 @@ public class LogIn extends javax.swing.JFrame {
     private void lbOutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbOutMouseExited
         lbOut.setForeground(new Color(239, 32, 130));
     }//GEN-LAST:event_lbOutMouseExited
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        dangNhap();
+    }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignupActionPerformed
+        openDangKy();
+    }//GEN-LAST:event_btnSignupActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -168,7 +262,7 @@ public class LogIn extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -182,6 +276,9 @@ public class LogIn extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(LogIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -203,6 +300,8 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel lbBackGroud;
+    private javax.swing.JLabel lbLoading;
     private javax.swing.JLabel lbOut;
     private swing.Panel panel1;
     private swing.MyTextField txtName;
